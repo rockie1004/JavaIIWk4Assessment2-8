@@ -11,21 +11,10 @@ public class DogRater {
 	private String name;
 	private String activity;
 
-	/**
-	 * @param name
-	 * @param activity
-	 */
-	public DogRater(String name, String activity) {
-		super();
-		this.name = name;
-		this.activity = activity;
-		setRating();
-	}
-
 	public DogRater() {
 		super();
 		setRating();
-		}
+	}
 
     /**
 	 * @param name
@@ -84,13 +73,16 @@ public class DogRater {
 @Override
 public String toString() {
 	String description = getName()+" is ";
+	description += getRating()+"/"+DENOMINATOR +"!";
+ return description;
+}
+
+public String getActivityDescription() {
 	String activity = getActivity();	
 		
-	if (activity.equals("Sleep")) {description+="always ready for a snoozle! ";}
-	else if (activity.equals("Fetch")) {description+="always ready to fetch again! ";}
-	else if (activity.equals("Stuffed Toy")) {description+="always hangin' with the best stuffed fren! ";}
-	
-	description += getRating()+"/"+DENOMINATOR;
- return description;
+	if (activity.equals("Sleep")) {return "Always ready for a snoozle! ";}
+	else if (activity.equals("Fetch")) {return "Always ready to fetch again! ";}
+	else if (activity.equals("Stuffed Toy")) {return "Always hangin' with the best stuffed fren! ";}
+	return "Great dog!";
 }
 }

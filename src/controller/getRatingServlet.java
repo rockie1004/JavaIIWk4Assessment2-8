@@ -28,15 +28,13 @@ public class getRatingServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException 
 	{
 		String userName = request.getParameter("name");
-		String userActivity = request.getParameter("activity");
 		
-		DogRater userDog = new DogRater(userName, userActivity);
+		DogRater userDog = new DogRater(userName);
 		
 		request.setAttribute("userDogRating", userDog);
 		
 		getServletContext().getRequestDispatcher("/result.jsp").forward(request, response);
 		
-	
 	}
 
 }

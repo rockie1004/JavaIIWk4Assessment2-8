@@ -6,11 +6,13 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Results</title>
+<title>Result Rating</title>
 </head>
 <h1>${userDogRating.getName()}!</h1>
 <body>
 	<p>${userDogRating.toString()}</p>
-	<a href="index.jsp">Rate another dog!</a>
+	<p><a href="index.jsp">Start!</a></p>
+	<p><a href="formDesc.jsp">Description!</a></p>
+	
 </body>
 </html>

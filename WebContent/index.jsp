@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Welcome to the Java EE World!</title>
+<title>Start</title>
 </head>
 <body>
 	<h1>Dog Rater</h1>
@@ -14,17 +14,11 @@
 		What is this dog's name? <input type="text" name="name" size="10">
 		<p>
 
-			What is this dog's favorite activity? <input list="activities"
-				name="activity" size="10">
 
-			<datalist id="activities">
-				<option value="Sleep">
-				<option value="Fetch">
-				<option value="Stuffed Toy">
-			</datalist>
 		<p>
 
 			<input type="submit" value="Rate This Dog" />
 	</form>
+	
 </body>
 </html>
